@@ -17,4 +17,9 @@ jobs:
         run: |
           npm install -g @lhci/cli@0.12.x
           npm start
-          curl -vvvv http://localhost:4200
+          curl -vvvv http://localhost:4200 test.log 2>&1
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: curl-output
+          path: test.log
