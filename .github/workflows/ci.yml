@@ -16,7 +16,7 @@ jobs:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.12.x
-          npm start
+          lhci autorun
           curl -vvvv http://localhost:4200 test.log 2>&1
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
