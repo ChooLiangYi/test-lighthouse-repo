@@ -10,7 +10,7 @@ jobs:
         id: lighthouse
         uses: treosh/lighthouse-ci-action@v10
         with:
-          configPath: ch-web-frontend/lighthouserc.json
+          configPath: ./lighthouserc.json
           urls: |
             https://www.coinhako.com
           uploadArtifacts: true # save results as an action artifact
