@@ -17,6 +17,7 @@ jobs:
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
       - name: Notify when lighthouse score below expected
         run: |
-          echo "this is the result ${{ steps.lighthouse.outputs.assertionresults }}"
+          echo "this is the result ${{ steps.lighthouse.outputs.assertionResults }}"
           echo "this is the links ${{ steps.lighthouse.outputs.links }}"
           echo "this is the result path ${{ steps.lighthouse.outputs.resultspath }}"
+          echo "this is the manifest ${{ steps.lighthouse.outputs.manifest }}"
